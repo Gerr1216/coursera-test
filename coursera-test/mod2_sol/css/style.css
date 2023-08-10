@@ -1,0 +1,104 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #093145;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Headings */
+h1 {
+    font-size: 175%;
+    color: rgb(240, 218, 240);
+    text-align: center;
+    height: 100px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h2 {
+    font-size: 125%;
+    border: 2px solid black;
+    padding: 4px;
+    color: white;
+    width: 90px;
+    height: 40px;
+    float: right;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Sections */
+#section1 {
+    background-color: Black;
+}
+
+#section2 {
+    background-color: #003300;
+}
+
+#section3 {
+    background-color: #330000;
+}
+
+/* Paragraphs */
+p {
+    color: #1C1E1E;
+    margin: 20px;
+    clear: right;
+}
+
+/* Boxes */
+.box {
+    border: 2px solid black;
+    margin: 20px;
+    background-color: hsl(300, 2%, 69%);
+    float: left;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Desktop View */
+@media (min-width: 992px) {
+
+
+    .box{
+        flex-grow: 1;
+        width: 30%
+    }
+}
+
+/* Tablet View */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .container{
+        flex-direction: column;
+    }
+
+    .box:nth-child(-n+2) {
+        flex: 1;
+        width: 40%;
+    }
+    .box:nth-child(3) {
+        flex-basis: 100%;
+        margin-right: 110px ;
+        align-items: center;
+    }
+}  
+   
+   /* Mobile View */
+   @media (max-width: 767px) {
+       .box {
+           width: 70%;
+           height: 50%;
+       }
+   }
