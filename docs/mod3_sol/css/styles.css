@@ -1,0 +1,118 @@
+body{
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+   .text-center {
+    text-align: center;
+  }
+  
+  .navbar {
+    background-image: linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%);
+    border: none;
+    margin-bottom: 0;
+  }
+  
+  .navbar-brand {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* Style the mobile menu button icon */
+  .navbar-toggle .icon-bar {
+    background-color: #333;
+  }
+  
+  /* Style the dropdown menu for mobile */
+  .navbar-collapse.collapse.in {
+    background-color: hsl(106, 79%, 71%);
+  }
+  
+  /* Style the menu items in the mobile dropdown */
+  .navbar-nav > li > a {
+    color: #fff;
+  }
+  
+  /* Remove the underline from menu items */
+  .navbar-nav > li > a:hover,
+  .navbar-nav > li > a:focus {
+    text-decoration: none;
+  }
+  
+  .navbar-brand visible-xs{
+    display: none;
+  }
+  
+  /* Show the mobile menu button icon */
+  .navbar-toggle visible-xs{
+    display: block;
+  }
+  
+  /* Hide the menu items on mobile */
+  .navbar-nav visible-xs{
+    display: none;
+  }
+  
+  /* Show the menu items when the mobile menu is expanded */
+  .navbar-collapse.collapse.in .navbar-nav visible-xs{
+    display: block;
+  }
+
+  h3 {
+    font-size: 155%;
+    color: indigo;
+    width: 90px;
+    height: 40px;
+    margin-bottom: 10px;
+    padding-left: 110px 
+}
+
+/* Paragraphs */
+p {
+    color: #1C1E1E;
+    margin: 20px;
+}
+
+/* Boxes */
+.container{
+    padding-right: 20px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
+.box {
+    border: 2px solid black;
+    margin: 20px;
+    background-color: hsl(300, 2%, 69%);
+    float:left;
+}
+
+
+/* Desktop View (col-md-4) */
+@media (min-width: 992px) {
+    .box{
+        flex-grow: 1;
+        width: 29%;
+    }
+}
+  
+  /* Tablet View (col-sm-12) */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .box {
+      width: 100%; /* Each box takes full width in tablet view */
+    }
+  }
+  
+  /* Mobile View (col-xs-12) */
+  @media (max-width: 767px) {
+    .box {
+        flex-grow:1;
+        width: 70%;
+        height: 20%;        
+    }
+    .container{
+        padding-left: 200px;
+        padding-right: 0px;
+    }
+  }
